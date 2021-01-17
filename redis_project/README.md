@@ -62,8 +62,8 @@ $ pip install -r requirements.txt
 $ git clone https://github.com/ChryssaNab/BDMS-AUEB.git
 $ cd /BDMS-AUEB/redis_project/
 ```
-**2.** Modify paths in the XML file when dealing with MySQL data. 
-- In this example, we implemented the functions in case of csv, excel and MySQL data sources and the data we used are the following:
+**2.** Modify paths in the XML file in case of MySQL data-source. 
+- In this example, we implemented the functions in case of csv, excel and MySQL data-sources and the data we used are the following:
 
 | user_ID |	transaction_ID |
 | :---:   | :-: | 
@@ -87,6 +87,38 @@ $ cd /BDMS-AUEB/redis_project/
  ```
  
 ### [**Results**](#)
+
+**Test_Create_KLStore()**
+
+<img src="https://github.com/ChryssaNab/BDMS-AUEB/blob/master/redis_project/results/create_KLStore.png"/>
+
+**Test_Filter_KLStore()**
+
+<img src="https://github.com/ChryssaNab/BDMS-AUEB/blob/master/redis_project/results/Filter_KLStore.png"/>
+
+
+**Test_Apply_KLStore()**
+
+<img src="https://github.com/ChryssaNab/BDMS-AUEB/blob/master/redis_project/results/Apply_KLStore.png"/>
+
+
+**Test_Aggr_KLStore()**
+
+<img src="https://github.com/ChryssaNab/BDMS-AUEB/blob/master/redis_project/results/Aggr_KLStore_1.png"/>
+
+<img src="https://github.com/ChryssaNab/BDMS-AUEB/blob/master/redis_project/results/Aggr_KLStore_2.png"/>
+
+<img src="https://github.com/ChryssaNab/BDMS-AUEB/blob/master/redis_project/results/Aggr_KLStore_3.png"/>
+
+
+**Test_LookUp_KLStore()**
+
+<img src="https://github.com/ChryssaNab/BDMS-AUEB/blob/master/redis_project/results/LookUp_KLStore.png"/>
+
+**Test_ProjSel_KLStore()**
+
+<img src="https://github.com/ChryssaNab/BDMS-AUEB/blob/master/redis_project/results/ProjSel_KLStore.png"/>
+
 
 
 
