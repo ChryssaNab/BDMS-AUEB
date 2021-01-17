@@ -1,0 +1,220 @@
+\documentclass[12pt]{report}
+\usepackage[a4paper]{geometry}
+\usepackage[myheadings]{fullpage}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{graphicx, wrapfig, subcaption, setspace, booktabs}
+\usepackage[T1]{fontenc}
+\usepackage[font=small, labelfont=bf]{caption}
+\usepackage{fourier}
+\usepackage[protrusion=true, expansion=true]{microtype}
+\usepackage[english]{babel}
+\usepackage{sectsty}
+\usepackage{url, lipsum}
+\usepackage{tgbonum}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage[none]{hyphenat}
+\usepackage[bottom]{footmisc}
+\sloppy
+% Handle 'Underfull \hbox or \vbox' warnings
+\usepackage{etoolbox}
+\apptocmd{\sloppy}{\hbadness 10000\relax}{}{}
+\apptocmd{\sloppy}{\vbadness 10000\relax}{}{}
+% Handle 'PDF inclusion' warnings    
+\pdfsuppresswarningpagegroup=1
+% Change Content numbering
+\renewcommand{\thesection}{\arabic{section}}
+
+\usepackage[colorlinks]{hyperref}
+% Packages for Python code
+\usepackage{listings}
+\usepackage{color}
+ 
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+ 
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+ 
+\lstset{style=mystyle}
+
+\newcommand{\HRule}[1]{\rule{\linewidth}{#1}}
+\onehalfspacing
+\setcounter{tocdepth}{5}
+\setcounter{secnumdepth}{5}
+
+\begin{document}
+{\fontfamily{cmr}\selectfont
+\title{ \normalsize \textsc{}
+		\\ [2.0cm]
+		\HRule{0.5pt} \\
+		\LARGE \textbf{\uppercase{Big Data Management Systems:\\
+		PROJECT \#1 -- MapReduce/Hadoop}
+		\HRule{2pt} \\ [0.5cm]
+		\normalsize \today \vspace*{5\baselineskip}}
+		}
+
+\date{}
+
+\author{
+		Zoe Kotti and Chryssa Nampouri \\ 
+		\textit{Department of Management Science and Technology} \\
+		\textit{Athens University of Economics and Business} \\
+		Athens, Greece \\
+		\{t8150062, t8150096\}@aueb.gr
+}
+\maketitle
+\tableofcontents
+\newpage
+
+% Section title formatting
+\sectionfont{\scshape}
+
+\section{Project Description}
+The purpose of this project was to implement
+the \emph{K-Means} clustering algorithm in \emph{MapReduce}
+and apply in on synthetic data that we would create.
+
+First, we installed Hadoop on Linux Ubuntu
+by following the ``\textit{How to install Hadoop on Ubuntu 18.04
+Bionic Beaver Linux}'',
+as introduced by Sandip Bhowmik.
+\footnote{\url{https://linuxconfig.org/how-to-install-hadoop-on-ubuntu-18-04-bionic-beaver-linux}}
+
+We then created a comma-separated values ({\sc csv}) file in Python
+that contained 1.5 million data points in the form (x, y),
+where x and y are real numbers.
+The generation of the data points was biased
+toward the creation of three clusters.
+In other words, we chose a-priori three centers
+(x1, y1), (x2, y2) and (x3, y3) 
+and generated the rest of the data points around these,
+using some random distance following a skewed distribution (towards 0).
+
+Next, we moved the particular file with the data points to {\sc hdfs},
+using the following commands in terminal:
+\mbox{} \\
+
+\fbox{\textbf{\$ hdfs dfs -mkdir /kmeans}}
+
+\fbox{\textbf{\$ hdfs dfs -put \$HADOOP\_HOME/localFilePath/data-points.csv /kmeans
+}}
+\mbox{} \\
+
+Finally, we implemented the \emph{K-Means} algorithm
+as described in the class
+and applied to in our data set.
+We used \textbf{Hadoop Streaming} for our project,
+and followed the example
+``\textit{Writing An Hadoop MapReduce Program In Python}''
+of Michael G. Noll
+\footnote{\url{https://www.michael-noll.com/tutorials/writing-an-hadoop-mapreduce-program-in-python}}.
+
+\newpage
+
+\section{Data Generation}
+We implemented the data generation in Python.
+In order to generate the data points we used
+the \emph{make\_blobs} function of the \emph{scikit-learn} package
+\footnote{\url{https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_blobs.html}}.
+In this way, our data points follow a normal distribution
+with standard deviation equal to \textbf{5.0}. \\
+The initial centers that we used are the following: \\
+1. \textbf{(-100000, -100000)} \\
+2. \textbf{(1, 1)} \\
+3. \textbf{(100000, 100000)} \\
+The program that we developed
+in order to implement the particular process of data generation
+can be found below:
+\lstinputlisting[language=Python]{../generateDataset.py}
+
+\newpage
+
+\section{MapReduce Implementation of K-Means in Python}
+\label{sec:implementation}
+We implemented the \emph{MapReduce} process in Python.
+We decided to also include the \textbf{Combine} process,
+as described in the class.
+For these processes, we created three Python files:
+\emph{mapper.py},\emph{combiner.py}, \emph{reducer.py}. \\
+\hfill \break
+The code that we developed for the \textbf{Map} process follows below:
+\lstinputlisting[language=Python]{../mapper.py}
+\hfill \break
+The code that we developed for the \textbf{Combine} process follows below:
+\lstinputlisting[language=Python]{../combiner.py}
+\hfill \break
+The code that we developed for the \textbf{Reduce} process follows below:
+\lstinputlisting[language=Python]{../reducer.py}
+
+\newpage
+
+\section{MapReduce Runner for K-Means}
+We implemented the running process of \emph{MapReduce},
+as described in~\ref{sec:implementation},
+by developing another Python file named \emph{kMeansRunner.py}. 
+kMeansRunner.py is executed for as long as the centroids
+of the clusters keep changing;
+if the centroids do not change in two sequential iterations,
+then the process completes,
+and the final centroids are the last that occurred from this process.
+
+Before the user runs kMeansRunner.py,
+{\color{red} he must first create a directory named \emph{KMeansProject}
+under the directory where all Python files are stored.}
+Otherwise, he needs to modify all paths
+that include the particular directory
+according to his preferences.
+In this directory,
+the output of the \emph{MapReduce} process
+(i.e. the centroids produced in an iteration of K-Means)
+is copied locally temporarily from {\sc hdfs}.
+The particular file is used for the comparison
+of the new and the last centroids.
+
+While executing the \emph{MapReduce} process,
+we also keep a file with all centroids produced
+during all iterations of K-Means algorithm.
+{\color{red} At the end, this is our output;
+the last line includes the \textbf{final} centroids.}
+
+All input and output files of the MapReduce process
+can also been seen through the localhost of the browser
+in a more friendly way.
+\\
+\hfill \break
+The code of \textbf{KMeansRunner} follows below:
+\lstinputlisting[language=Python]{../kMeansRunner.py}
+
+\newpage
+
+\section{Execution \& Results of MapReduce for K-Means}
+The execution of MapReduce process requires Python 3. 
+The process is executed through \emph{kMeansRunner.py}
+and the user simply runs the following command:
+\mbox{} \\
+
+\fbox{\textbf{\$ python3 kMeansRunner.py}}
+
+\newpage
+
+\end{document}
