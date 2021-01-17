@@ -72,4 +72,4 @@ The output of the MapReduce process is also stored on Hadoop under the name part
 ### [**Team**](#)
 
 - [Zoe Kotti](https://github.com/zkotti)
-- [Nampouri Chryssa](https://github.com/ChryssaNab)
+- [Chryssa Nampouri](https://github.com/ChryssaNab)
