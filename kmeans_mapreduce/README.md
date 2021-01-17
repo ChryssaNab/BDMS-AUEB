@@ -29,7 +29,7 @@ Data Management Systems" taught by Prof. Damianos Chatziantoniou. A detailed des
 
 **2.** Install Hadoop on Linux Ubuntu according to the following website: [How to install Hadoop on Ubuntu 18.04 Bionic Beaver Linux](https://linuxconfig.org/how-to-install-hadoop-on-ubuntu-18-04-bionic-beaver-linux)
 
-**3.** Install necessary requirements
+**3.** Install necessary requirements.
 ``` shell
 $ pip install -r requirements.txt
 ```
