@@ -9,11 +9,11 @@
 	</datasource>
 	<datasource name="Excel_Source" id="excel19" type="excel">
 		<filename>Redis_Data_Source.xlsx</filename>
-		<path>data-sources/</path>
+		<path>../data-sources/</path>
 	</datasource>
 	<datasource name="CSV_Source" id="csv19" type="csv">
 		<filename>Redis_Data_Source.csv</filename>
-		<path>data-sources/</path>
+		<path>../data-sources/</path>
 		<delimiter>;</delimiter>
 	</datasource>
 </datasources>
