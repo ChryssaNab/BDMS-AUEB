@@ -8,11 +8,6 @@
 4. [Team](#Team)
 
 
-
-<a name="Run"></a>
-<a name="Results"></a>
-<a name="Team"></a>
-
 ### [**Project Description**](#) <a name="descr"></a>
 A key-value store is a system that manages a collection of ( key,value ) pairs, where key is unique in this universe. Redis - and other systems - 
 allow the value to be a single value (e.g. string, number), a set of values, a list of values, a hash, etc.
@@ -52,8 +47,7 @@ $ sudo systemctl restart redis.service # Restart the Redis service to reflect th
 ``` shell
 $ pip install -r requirements.txt
 ```
-
-### [**Implementation of the functions in Redis**](#)
+### [Implementation of the functions in Redis](#) <a name="Run"></a>
 
 **1.** Clone this repository:
 
@@ -84,8 +78,8 @@ $ cd /BDMS-AUEB/redis_project/
 ``` python
  $ python3 test_redis_functions.py
  ```
- 
-### [**Results**](#)
+
+### [Results](#) <a name="Results"></a>
 
 **Test_Create_KLStore()**
 
@@ -121,7 +115,7 @@ $ cd /BDMS-AUEB/redis_project/
 
 
 
-### [**Team**](#)
+### [Team](#) <a name="Team"></a>
 
 - [Zoe Kotti](https://github.com/zkotti)
 - [Chryssa Nampouri](https://github.com/ChryssaNab)
