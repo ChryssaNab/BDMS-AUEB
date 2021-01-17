@@ -33,8 +33,8 @@ All these KL stores should exist in Redis. The project was implemented in the co
 
 
 <a name="cont"></a>
+### [Installing & Configuring Redis](#) <a name="Inst"></a>
 
-### Installing & Configuring Redis <a name="Inst"></a>
 
 
 **1.** We assume that Python3 is already installed in the system.
