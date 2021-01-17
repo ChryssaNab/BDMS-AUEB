@@ -7,14 +7,7 @@
 3. [Results](#Results)
 4. [Team](#Team)
 
-
-<a name="descr"></a>
-<a name="Inst"></a>
-<a name="Run"></a>
-<a name="Results"></a>
-<a name="Team"></a>
-
-### [**Project Description**](#)
+### [**Project Description**](#) <a name="descr"></a>
 
 The aim of this project is to implement k-means clustering algorithm on Hadoop. The project was implemented in the context of the course "Big 
 Data Management Systems" taught by Prof. Damianos Chatziantoniou. A detailed description of the assignment can be found [here](./kmeans_mapreduce/Proj1_Hadoop_Description.pdf).
@@ -22,7 +15,7 @@ Data Management Systems" taught by Prof. Damianos Chatziantoniou. A detailed des
 
 <a name="cont"></a>
 
-### [**Installing & Configuring Hadoop**](#)
+### [**Installing & Configuring Hadoop**](#) <a name="Inst"></a>
 
 
 **1.** We assume that Python3 is already installed in the system.
@@ -34,7 +27,7 @@ Data Management Systems" taught by Prof. Damianos Chatziantoniou. A detailed des
 $ pip install -r requirements.txt
 ```
 
-### [**Running K-Means on Hadoop**](#)
+### [**Running K-Means on Hadoop**](#) <a name="Run"></a>
 
 **1.** Clone this repository:
 
@@ -59,7 +52,7 @@ $ hdfs dfs -put $HADOOP_HOME/localFilePath/data-points.csv /kmeans
  $ python3 kMeansRunner.py
  ```
  
-### [**Results**](#)
+### [**Results**](#) <a name="Results"></a>
 
 
 <img src="https://github.com/ChryssaNab/BDMS-AUEB/blob/master/kmeans_mapreduce/results/results.png" height="470"/>
@@ -74,7 +67,7 @@ The output of the MapReduce process is also stored on Hadoop under the name part
 <img src="https://github.com/ChryssaNab/BDMS-AUEB/blob/master/kmeans_mapreduce/results/hdfs_results.png" height = "350"/>
 
 
-### [**Team**](#)
+### [**Team**](#) <a name="Team"></a>
 
 - [Zoe Kotti](https://github.com/zkotti)
 - [Chryssa Nampouri](https://github.com/ChryssaNab)
