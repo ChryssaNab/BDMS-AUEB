@@ -1,0 +1,19 @@
+<datasources Repository="Redis_Data_Source">
+	<datasource name="DB_Source" id="db19" type="db">
+		<dbconnect>
+			<username>root</username>
+			<password></password>
+			<request>string</request>
+			<database>python_mysql</database>
+		</dbconnect>
+	</datasource>
+	<datasource name="Excel_Source" id="excel19" type="excel">
+		<filename>Redis_Data_Source.xlsx</filename>
+		<path>data-sources/</path>
+	</datasource>
+	<datasource name="CSV_Source" id="csv19" type="csv">
+		<filename>Redis_Data_Source.csv</filename>
+		<path>data-sources/</path>
+		<delimiter>;</delimiter>
+	</datasource>
+</datasources>
