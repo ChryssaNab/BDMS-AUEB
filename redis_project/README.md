@@ -8,13 +8,12 @@
 4. [Team](#Team)
 
 
-<a name="descr"></a>
-<a name="Inst"></a>
+
 <a name="Run"></a>
 <a name="Results"></a>
 <a name="Team"></a>
 
-### [**Project Description**](#)
+### [**Project Description**](#) <a name="descr"></a>
 A key-value store is a system that manages a collection of ( key,value ) pairs, where key is unique in this universe. Redis - and other systems - 
 allow the value to be a single value (e.g. string, number), a set of values, a list of values, a hash, etc.
 
@@ -35,7 +34,7 @@ All these KL stores should exist in Redis. The project was implemented in the co
 
 <a name="cont"></a>
 
-### [**Installing & Configuring Redis**](#)
+### Installing & Configuring Redis <a name="Inst"></a>
 
 
 **1.** We assume that Python3 is already installed in the system.
