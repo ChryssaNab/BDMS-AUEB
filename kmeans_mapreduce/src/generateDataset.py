@@ -7,7 +7,7 @@ generateDataset.py: Generates two csv files;
     2. data-points-labels.csv: the data points accompanied by the
         label of the cluster they belong to
 By default, our clusters are 3, and the data points are in total
-1,500,000.
+1,200,000.
 
 """
 
@@ -19,7 +19,7 @@ from sklearn.datasets.samples_generator import make_blobs
 
 # Hard-append initial centroids and number of data points
 centroids = [[-100000, -100000], [1, 1], [100000, 100000]]
-n_samples = 1500000
+n_samples = 1200000
 
 fileName_points = "data-points.csv"
 fileName_points_labels = "data-points-labels.csv"

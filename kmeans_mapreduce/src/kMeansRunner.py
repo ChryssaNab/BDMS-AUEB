@@ -97,7 +97,7 @@ if __name__ == "__main__":
     # Generate the initial centroids of the clusters randomly
     initialCentroids = random.sample(dataPointsList, k=3)
     instanceKMeans.WriteCentroids(initialCentroids)
-    instanceKMeans.Addentroids(initialCentroids)
+    instanceKMeans.AddCentroids(initialCentroids)
 
     match = False
     # Run until centroids do not change for two sequential iterations

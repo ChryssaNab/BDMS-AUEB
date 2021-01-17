@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 """
-combiner.py: Performs the Combiner process.
+combiner.py: Performs the Combine process.
 
 Input: A key-value set of a data point's coordinates (value)
     and its cluster (key); this is the output of Map Process (mapper.py)
