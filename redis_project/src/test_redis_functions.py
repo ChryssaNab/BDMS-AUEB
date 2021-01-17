@@ -16,7 +16,7 @@ def Test_Create_KLStore():
     name1 = redis.Redis(host='localhost', port=6379, db=0)
     name1.flushdb()
 
-    data_source = 'data-sources/Redis_Data_Source.xml'
+    data_source = '../data-sources/Redis_Data_Source.xml'
     query_string = ''
     position1 = 0
     position2 = 1
@@ -140,8 +140,8 @@ def Test_ProjSel_KLStore():
 
 # Run test functions
 Test_Create_KLStore()
-Test_Filter_KLStore()
-Test_Apply_KLStore()
-Test_Aggr_KLStore()
-Test_LookUp_KLStore()
-Test_ProjSel_KLStore()
+#Test_Filter_KLStore()
+#Test_Apply_KLStore()
+#Test_Aggr_KLStore()
+#Test_LookUp_KLStore()
+#Test_ProjSel_KLStore()
