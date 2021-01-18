@@ -1,7 +1,7 @@
 # Big Data Management Systems Assignments
 
-The current project is implemented in the context of the course "Big Data Management Systems" taught by Prof. Chatziantoniou in the 
-Department of Management Science and Technology (AUEB). The aim of the project is to familiarize the students with big data 
+The current project was implemented in the context of the course "Big Data Management Systems" taught by Prof. Chatziantoniou in the 
+Department of Management Science and Technology (AUEB). The aim of the project was to familiarize the students with big data 
 management systems such as Hadoop, Redis, Neo4j and Azure Stream Analytics.
 
 
