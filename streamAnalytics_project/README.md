@@ -32,7 +32,7 @@ In the context of this assignment a set of Reference Data is given that consists
 The purpose of this project was to process a data stream of ATM transactions and answer stream queries. The schema of the stream is the 
 following: (ATMCode, CardNumber, Type, Amount). 
 
-The project was implemented in the context of the course "Big Data Management Systems" taught by Prof. Damianos Chatziantoniou. A detailed description of the assignment can be found [here](./streamAnalytics_project/Proj4_Stream_Analytics.pdf).
+The project was implemented in the context of the course "Big Data Management Systems" taught by Prof. Damianos Chatziantoniou. A detailed description of the assignment can be found [here](./Proj4_Stream_Analytics.pdf).
 
 ### [Azure Configuration](#) <a name="Inst"></a>
 
