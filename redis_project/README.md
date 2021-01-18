@@ -24,7 +24,7 @@ a Key-List Store (KL Store). This is a special case of a multi-map data structur
 | 76 | [t121, t72, t99, t179] | 
 
 The aim of this project is to implement in Python some certain functions/methods that get one or more KL stores and "return" (or update) a KL store.
-All these KL stores should exist in Redis. The project was implemented in the context of the course "Big Data Management Systems" taught by Prof. Damianos Chatziantoniou. A detailed description of the assignment can be found [here](./kmeans_mapreduce/Proj1_Hadoop_Description.pdf).
+All these KL stores should exist in Redis. The project was implemented in the context of the course "Big Data Management Systems" taught by Prof. Damianos Chatziantoniou. A detailed description of the assignment can be found [here](./Proj2_Redis_Description.pdf).
 
 
 <a name="cont"></a>
