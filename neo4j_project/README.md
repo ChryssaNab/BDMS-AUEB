@@ -80,7 +80,7 @@ Two examples of the Neo4j graph are depicted below:
 
  <img src="https://github.com/ChryssaNab/BDMS-AUEB/blob/master/neo4j_project/configScreenshots/write/neo4j_graph_2.PNG" height = "400"/>
  
-To access Neo4j from a regular browser window, type [http://localhost:7474](http://localhost:7474) and signing in with Username: **neo4j**, Password: your password. \
+To access Neo4j from a regular browser window, type [http://localhost:7474](http://localhost:7474) and signing in with Username: **neo4j**, Password: Your password. 
 
 
 **7.** Run **run_queries_mysql.py** to execute the queries in MySQL.
