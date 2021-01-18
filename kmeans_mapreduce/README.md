@@ -6,11 +6,12 @@
 2. [Running K-Means on Hadoop](#Run)
 3. [Results](#Results)
 4. [Team](#Team)
+5. [See also](#ext)
 
 ### [**Project Description**](#) <a name="descr"></a>
 
 The aim of this project is to implement k-means clustering algorithm on Hadoop. The project was implemented in the context of the course "Big 
-Data Management Systems" taught by Prof. Damianos Chatziantoniou. A detailed description of the assignment can be found [here](./kmeans_mapreduce/Proj1_Hadoop_Description.pdf).
+Data Management Systems" taught by Prof. Damianos Chatziantoniou. A detailed description of the assignment can be found [here](./Proj1_Hadoop_Description.pdf).
 
 
 <a name="cont"></a>
@@ -71,3 +72,10 @@ The output of the MapReduce process is also stored on Hadoop under the name part
 
 - [Zoe Kotti](https://github.com/zkotti)
 - [Chryssa Nampouri](https://github.com/ChryssaNab)
+
+### [**See also**](#) <a name="ext"></a>
+
+External resourses:
+
+- [How to install Hadoop on Ubuntu 18.04 Bionic Beaver Linux](https://linuxconfig.org/how-to-install-hadoop-on-ubuntu-18-04-bionic-beaver-linux)
+- [Writing An Hadoop MapReduce Program In Python](https://www.michael-noll.com/tutorials/writing-an-hadoop-mapreduce-program-in-python/)
