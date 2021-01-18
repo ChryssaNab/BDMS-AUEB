@@ -30,9 +30,7 @@ In the context of this assignment a set of Reference Data is given that consists
     - *area_city* (string)
 
 The purpose of this project was to process a data stream of ATM transactions and answer stream queries. The schema of the stream is the 
-following: (ATMCode, CardNumber, Type, Amount). 
-
-The project was implemented in the context of the course "Big Data Management Systems" taught by Prof. Damianos Chatziantoniou. A detailed description of the assignment can be found [here](./Proj4_Stream_Analytics.pdf).
+following: (ATMCode, CardNumber, Type, Amount). The project was implemented in the context of the course "Big Data Management Systems" taught by Prof. Damianos Chatziantoniou. A detailed description of the assignment can be found [here](./Proj4_Stream_Analytics.pdf).
 
 ### [Azure Configuration](#) <a name="Inst"></a>
 
@@ -56,16 +54,16 @@ In order to execute the above process on Azure Stream Analytics Platform the fol
 After specifying the input source of the streaming data and the output sink for the results, the following queries were expressed in a SQL-like query language (T-SQL) , in order to
 be executed on the Azure Platform:
 
-&nbsp;&nbsp;&nbsp; 1. Show the total 'Amount' of 'Type = 0' transactions at 'ATM Code = 21' of the last 10 minutes. Repeat as new events keep flowing in (use a 
+&nbsp;&nbsp;&nbsp; **1.** Show the total 'Amount' of 'Type = 0' transactions at 'ATM Code = 21' of the last 10 minutes. Repeat as new events keep flowing in (use a 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sliding window). <br/> 
-&nbsp;&nbsp;&nbsp; 2. Show the total 'Amount' of 'Type = 1' transactions at 'ATM Code = 21' of the last hour. Repeat once every hour (use a tumbling window). <br/>
-&nbsp;&nbsp;&nbsp; 3. Show the total 'Amount' of 'Type = 1' transactions at 'ATM Code = 21' of the last hour. Repeat once every 30 minutes (use a hopping 
+&nbsp;&nbsp;&nbsp; **2.** Show the total 'Amount' of 'Type = 1' transactions at 'ATM Code = 21' of the last hour. Repeat once every hour (use a tumbling window). <br/>
+&nbsp;&nbsp;&nbsp; **3.** Show the total 'Amount' of 'Type = 1' transactions at 'ATM Code = 21' of the last hour. Repeat once every 30 minutes (use a hopping 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; window). <br/>
-&nbsp;&nbsp;&nbsp; 4. Show the total 'Amount' of 'Type = 1' transactions per 'ATM Code' of the last one hour (use a sliding window). <br/>
-&nbsp;&nbsp;&nbsp; 5. Show the total 'Amount' of 'Type = 1' transactions per 'Area Code' of the last hour. Repeat once every hour (use a tumbling window). <br/>
-&nbsp;&nbsp;&nbsp; 6. Show the total 'Amount' per ATM's 'City' and Customer's 'Gender' of the last hour. Repeat once every hour (use a tumbling window). <br/>
-&nbsp;&nbsp;&nbsp; 7. Alert (SELECT '1') if a Customer has performed two transactions of 'Type = 1' in a window of an hour (use a sliding window). <br/>
-&nbsp;&nbsp;&nbsp; 8. Alert (SELECT '1') if the 'Area Code' of the ATM of the transaction is not the same as the 'Area Code' of the 'Card Number' (Customer's 
+&nbsp;&nbsp;&nbsp; **4.** Show the total 'Amount' of 'Type = 1' transactions per 'ATM Code' of the last one hour (use a sliding window). <br/>
+&nbsp;&nbsp;&nbsp; **5.** Show the total 'Amount' of 'Type = 1' transactions per 'Area Code' of the last hour. Repeat once every hour (use a tumbling window). <br/>
+&nbsp;&nbsp;&nbsp; **6.** Show the total 'Amount' per ATM's 'City' and Customer's 'Gender' of the last hour. Repeat once every hour (use a tumbling window). <br/>
+&nbsp;&nbsp;&nbsp; **7.** Alert (SELECT '1') if a Customer has performed two transactions of 'Type = 1' in a window of an hour (use a sliding window). <br/>
+&nbsp;&nbsp;&nbsp; **8.** Alert (SELECT '1') if the 'Area Code' of the ATM of the transaction is not the same as the 'Area Code' of the 'Card Number' (Customer's 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Area Code) - (use a sliding window). 
 
 
@@ -83,3 +81,4 @@ be executed on the Azure Platform:
 External resources:
 
 - [Microsoft Azure: Stream Analytics Documentation](https://docs.microsoft.com/en-us/azure/stream-analytics/)
+- [Generate a Security Access Signature](https://github.com/sandrinodimattia/RedDog/releases)
