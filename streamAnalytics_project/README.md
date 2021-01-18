@@ -81,4 +81,3 @@ be executed on the Azure Platform:
 External resources:
 
 - [Microsoft Azure: Stream Analytics Documentation](https://docs.microsoft.com/en-us/azure/stream-analytics/)
-- [Generate a Security Access Signature](https://github.com/sandrinodimattia/RedDog/releases)
