@@ -28,6 +28,6 @@ management systems such as Hadoop, Redis, Neo4j and Azure Stream Analytics.
 
 ## Team
 
-[![](https://github.com/zkotti.png?size=160)](https://github.com/zkotti) | [![](https://github.com/ChryssaNab.png?size=160)](https://github.com/ChryssaNab)
+ [![](https://github.com/ChryssaNab.png?size=160)](https://github.com/ChryssaNab) | [![](https://github.com/zkotti.png?size=160)](https://github.com/zkotti)
 :-------------------------:|:-------------------------: 
- [Zoe Kotti](https://github.com/zkotti)             |  [Chryssa Nampouri](https://github.com/ChryssaNab)
+   [Chryssa Nampouri](https://github.com/ChryssaNab)       |  [Zoe Kotti](https://github.com/zkotti)     
