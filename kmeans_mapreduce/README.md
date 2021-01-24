@@ -10,8 +10,7 @@
 
 ### [**Project Description**](#) <a name="descr"></a>
 
-The aim of this project is to implement k-means clustering algorithm on Hadoop. The project was implemented in the context of the course "Big 
-Data Management Systems" taught by Prof. Damianos Chatziantoniou. A detailed description of the assignment can be found [here](./Proj1_Hadoop_Description.pdf).
+The aim of this project is to implement k-means clustering algorithm on Hadoop using sythetic data as a sample. The project was implemented in the context of the course "Big Data Management Systems" taught by Prof. Damianos Chatziantoniou. A detailed description of the assignment can be found [here](./Proj1_Hadoop_Description.pdf).
 
 
 <a name="cont"></a>
