@@ -2,18 +2,17 @@
 
 ### [**Contents**](#)
 1. [Project Description](#descr)
-1. [Installing & Configuring Redis](#Inst)
-2. [Implementation of the functions in Redis](#Run)
+1. [Installing and Configuring Redis](#Inst)
+2. [Implementation of the Functions in Redis](#Run)
 3. [Results](#Results)
 4. [Team](#Team)
 
+---
 
 ### [**Project Description**](#) <a name="descr"></a>
-A key-value store is a system that manages a collection of ( key,value ) pairs, where key is unique in this universe. Redis - and other systems - 
-allow the value to be a single value (e.g. string, number), a set of values, a list of values, a hash, etc.
+A key-value store is a system that manages a collection of (key, value) pairs, where each key is unique within its scope. Redis, along with other similar systems, allows the value to be a singular entity (such as a string or number), a set of values, a list of values, a hash, and so forth.
 
-Assume a collection of (key, list) pairs, i.e. the value is a list of values, namely strings. Assume that key is a string as well. Let's call such a collection 
-a Key-List Store (KL Store). This is a special case of a multi-map data structure, where several values are mapped to a key.
+Consider a set of (key, list) pairs, where the value comprises a list of strings, with both the key and the elements of the list being strings. We will refer to this collection as a Key-List Store (KL Store). It represents a special case of a multi-map data structure, wherein multiple values are associated with a single key.
 
 **Example of a Key-List Store:**
 | Key | List  | 
@@ -23,18 +22,19 @@ a Key-List Store (KL Store). This is a special case of a multi-map data structur
 | ... | ... |
 | 76 | [t121, t72, t99, t179] | 
 
-The aim of this project is to implement in Python some certain functions/methods that get one or more KL stores and "return" (or update) a KL store.
-All these KL stores should exist in Redis. The project was implemented in the context of the course "Big Data Management Systems" taught by Prof. Damianos Chatziantoniou. A detailed description of the assignment can be found [here](./Proj2_Redis_Description.pdf).
+The aim of this project is to implement specific functions in Python that take one or more KL Stores as input and either return a new KL Store or update the existing ones. The project was implemented in the context of the course "Big Data Management Systems" taught by Prof. Damianos Chatziantoniou. A detailed description of the assignment can be found [here](./Proj2_Redis_Description.pdf).
 
 
 <a name="cont"></a>
-### [Installing & Configuring Redis](#) <a name="Inst"></a>
+
+---
+### [Installing and Configuring Redis](#) <a name="Inst"></a>
 
 
 
-**1.** We assume that Python3 is already installed in the system.
+**1.** We assume that Python3 is already installed on the system.
 
-**2.** Install Redis on Linux Ubuntu according to the following website: [How To Install and Secure Redis on Ubuntu 18.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-redis-on-ubuntu-18-04)
+**2.** Install Redis on Ubuntu according to the following website: [How To Install and Secure Redis on Ubuntu 18.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-redis-on-ubuntu-18-04).
 
 
 ``` shell
@@ -43,20 +43,16 @@ $ sudo nano /etc/redis/redis.conf # Inside the file, find the supervised directi
 $ sudo systemctl restart redis.service # Restart the Redis service to reflect the changes you made to the configuration file.
 ``` 
 
-**3.** Install necessary requirements.
+**3.** Install necessary requirements:
 ``` shell
 $ pip install -r requirements.txt
 ```
-### [Implementation of the functions in Redis](#) <a name="Run"></a>
 
-**1.** Clone this repository:
+---
 
-``` shell
-$ git clone https://github.com/ChryssaNab/BDMS-AUEB.git
-$ cd /BDMS-AUEB/redis_project/
-```
-**2.** Modify paths in the XML file in case of MySQL data-source. 
-- In this example, we implemented the functions in case of csv, excel and MySQL data-sources and the data we used are the following:
+### [Implementation of the Functions in Redis](#) <a name="Run"></a>
+
+We have implemented the functions for CSV, Excel, and MySQL data-sources, and the datasets we used are as follows:
 
 | user_ID |	transaction_ID |
 | :---:   | :-: | 
@@ -72,12 +68,23 @@ $ cd /BDMS-AUEB/redis_project/
 | 5	| 30124567 |
 | 5	| 87654321 |
 
+**1.** Clone this repository:
 
-**3.** Run **test_redis_functions.py** to implement the functions on Redis.
+``` shell
+$ git clone https://github.com/ChryssaNab/BDMS-AUEB.git
+$ cd /BDMS-AUEB/redis_project/
+```
+
+**2.** Modify the paths and credentials in the XML configuration file if using a MySQL data-source. You can locate this file at *./data-sources/Redis_Data_Source.xml*. 
+
+
+**3.** Run **test_redis_functions.py** to deploy the functions on Redis:
 
 ``` python
  $ python3 test_redis_functions.py
  ```
+
+---
 
 ### [Results](#) <a name="Results"></a>
 
@@ -112,7 +119,7 @@ $ cd /BDMS-AUEB/redis_project/
 
 <img src="https://github.com/ChryssaNab/BDMS-AUEB/blob/master/redis_project/results/ProjSel_KLStore.png"/>
 
-
+---
 
 
 ### [Team](#) <a name="Team"></a>
