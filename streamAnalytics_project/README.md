@@ -5,7 +5,7 @@
 1. [Azure Configuration](#Inst)
 2. [Azure Stream Analytics: Queries](#Run)
 3. [Team](#Team)
-4. [See also](#ext) 
+4. [External Resources](#ext) 
 
 ---
 
@@ -84,8 +84,6 @@ be executed on the Azure Platform:
 - [Zoe Kotti](https://github.com/zkotti)
 - [Chryssa Nampouri](https://github.com/ChryssaNab)
 
-### [**See also**](#) <a name="ext"></a>
-
-External resources:
+### [**External Resources**](#) <a name="ext"></a>
 
 - [Microsoft Azure: Stream Analytics Documentation](https://docs.microsoft.com/en-us/azure/stream-analytics/)
